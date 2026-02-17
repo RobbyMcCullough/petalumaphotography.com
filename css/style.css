@@ -396,6 +396,10 @@ main {
         gap: 1rem;
     }
 
+    .gallery-item {
+        aspect-ratio: 1 / 1;
+    }
+
     .gallery-title {
         font-size: 2rem;
     }
