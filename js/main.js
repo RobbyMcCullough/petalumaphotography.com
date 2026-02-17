@@ -11,7 +11,22 @@ document.addEventListener('DOMContentLoaded', () => {
     setupLightbox();
     setupSmoothScroll();
     setupHeroParallax();
+    setupContactEmail();
 });
+
+// Obfuscated email to prevent bot scraping
+function setupContactEmail() {
+    const link = document.getElementById('contact-email');
+    if (!link) return;
+
+    const user = 'mybbor';
+    const domain = 'gmail.com';
+
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'mailto:' + user + '@' + domain;
+    });
+}
 
 // Load gallery metadata and initialize
 async function loadGalleryMetadata() {

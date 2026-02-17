@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#galleries" class="skip-link">Skip to gallery</a>
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
@@ -48,20 +49,20 @@
         <div class="contact-content">
             <h3>Let's Work Together</h3>
             <p>Available for photography projects and commissions</p>
-            <a href="mailto:hello@petalumaphotography.com" class="contact-button">Get in Touch</a>
+            <a href="#" class="contact-button" id="contact-email">Get in Touch</a>
         </div>
     </section>
 
     <footer class="footer">
         <p>&copy; 2026 Petaluma Photography. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">Photos provided by <a href="https://unsplash.com" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">Unsplash</a> and <a href="https://pexels.com" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">Pexels</a></p>
+        <p class="footer-credits">Photos provided by <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> and <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a></p>
     </footer>
 
     <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <span class="lightbox-prev">&#10094;</span>
-        <span class="lightbox-next">&#10095;</span>
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Image viewer">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous image">&#10094;</button>
+        <button class="lightbox-next" aria-label="Next image">&#10095;</button>
         <img class="lightbox-content" alt="Gallery image">
         <div class="lightbox-caption"></div>
     </div>

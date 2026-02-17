@@ -79,8 +79,40 @@ body {
     transition: var(--transition);
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--accent);
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+.gallery-item:focus-visible,
+.contact-button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.lightbox-control:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* Skip to content */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: var(--paper-white);
+    text-decoration: none;
+    z-index: 1001;
+    border-radius: 2px;
+}
+
+.skip-link:focus {
+    top: 0.5rem;
 }
 
 /* Hero Section */
@@ -173,7 +205,7 @@ main {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
     gap: 1rem;
     margin-bottom: 2rem;
 }
@@ -279,6 +311,21 @@ main {
     font-size: 0.9rem;
 }
 
+.footer-credits {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.footer-credits a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.footer-credits a:hover {
+    text-decoration: underline;
+}
+
 /* Lightbox */
 .lightbox {
     display: none;
@@ -318,6 +365,9 @@ main {
     user-select: none;
     transition: var(--transition);
     padding: 1rem;
+    background: none;
+    border: none;
+    line-height: 1;
 }
 
 .lightbox-close {
@@ -439,9 +489,5 @@ main {
 
     main {
         padding: 0 1rem;
-    }
-
-    .gallery-grid {
-        grid-auto-rows: 180px;
     }
 }
