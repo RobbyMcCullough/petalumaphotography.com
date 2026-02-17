@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Petaluma Photography - Capturing moments inspired by the beauty of Sonoma County">
+    <title>Petaluma Photography | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1><a href="index.html">Petaluma Photography</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#galleries">Galleries</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="credits.html">Credits</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="" alt="" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Light, Moment, Memory</h2>
+            <p>Photography rooted in Sonoma County's natural beauty</p>
+        </div>
+    </section>
+
+    <main id="galleries">
+        <section class="gallery-section">
+            <h3 class="gallery-title">Petaluma, California</h3>
+            <p class="gallery-subtitle">Exploring the beauty of Sonoma County and beyond</p>
+            <div class="gallery-grid" data-gallery="petaluma">
+                <!-- Images will be dynamically loaded -->
+            </div>
+        </section>
+    </main>
+
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <h3>Let's Work Together</h3>
+            <p>Available for photography projects and commissions</p>
+            <a href="mailto:hello@petalumaphotography.com" class="contact-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Petaluma Photography. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">Photos provided by <a href="https://unsplash.com" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">Unsplash</a> and <a href="https://pexels.com" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">Pexels</a></p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+        <img class="lightbox-content" alt="Gallery image">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

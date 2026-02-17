@@ -1,0 +1,274 @@
+/* Credits Page Styles */
+
+.credits-main {
+    margin-top: 80px;
+    min-height: calc(100vh - 200px);
+}
+
+.credits-hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    background: var(--paper-white);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.credits-hero h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+}
+
+.decorative-line {
+    width: 80px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 2rem;
+}
+
+.credits-intro {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.credits-intro a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.credits-intro a:hover {
+    color: var(--accent-light);
+}
+
+/* Credits Divider */
+.credits-divider {
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.credits-divider h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+}
+
+/* Photographers Grid */
+.photographers-grid {
+    max-width: 1200px;
+    margin: 2rem auto 4rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.photographer-card {
+    background: var(--paper-white);
+    padding: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.photographer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.photographer-card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.username {
+    color: var(--accent);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    font-family: monospace;
+}
+
+.photo-count {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-link {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--accent);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.profile-link:hover {
+    background: var(--accent);
+    color: var(--paper-white);
+}
+
+/* Pexels Card Styling */
+.pexels-card {
+    border-color: #05A081;
+}
+
+.pexels-card .profile-link {
+    border-color: #05A081;
+    color: #05A081;
+}
+
+.pexels-card .profile-link:hover {
+    background: #05A081;
+    color: var(--paper-white);
+}
+
+/* Info Sections */
+.pexels-info {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.pexels-info .info-box {
+    border-left-color: #05A081;
+}
+
+.unsplash-info {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.info-box {
+    background: var(--secondary-bg);
+    padding: 3rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--accent);
+    text-align: center;
+}
+
+.info-box h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.info-box p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.info-box p:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.unsplash-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--accent);
+    color: var(--paper-white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.unsplash-button:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
+}
+
+/* License Info */
+.license-info {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.license-info h4 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.license-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.license-info a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.license-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .credits-hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .credits-hero {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .credits-intro {
+        font-size: 1rem;
+    }
+
+    .photographers-grid {
+        grid-template-columns: 1fr;
+        margin: 3rem auto;
+        padding: 0 1rem;
+    }
+
+    .photographer-card {
+        padding: 2rem;
+    }
+
+    .info-box {
+        padding: 2rem;
+    }
+
+    .info-box h3 {
+        font-size: 1.6rem;
+    }
+
+    .info-box p {
+        font-size: 1rem;
+    }
+}
