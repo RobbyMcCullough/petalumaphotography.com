@@ -3,8 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Petaluma Photography - Inspired by the beauty of Sonoma County">
-    <title>About | Petaluma Photography</title>
+    <meta name="description" content="About Robby McCullough – a Petaluma-based photographer and marketer documenting the beauty of Petaluma, California and Sonoma County.">
+    <title>About – Petaluma Photographer Robby McCullough | Petaluma Photography</title>
+    <link rel="canonical" href="https://petalumaphotography.com/about.html">
+    <link rel="icon" type="image/png" href="images/petaluma%20photography%20logo%20glyph.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Petaluma Photography">
+    <meta property="og:title" content="About – Petaluma Photographer Robby McCullough">
+    <meta property="og:description" content="Robby McCullough is a Petaluma-based photographer and marketer curating images of Petaluma, California and the wider Sonoma County area.">
+    <meta property="og:url" content="https://petalumaphotography.com/about.html">
+    <meta property="og:image" content="https://petalumaphotography.com/images/petaluma-gallery/petaluma-3.jpg">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About – Petaluma Photographer Robby McCullough">
+    <meta name="twitter:description" content="Robby McCullough is a Petaluma-based photographer and marketer curating images of Petaluma and Sonoma County.">
+    <meta name="twitter:image" content="https://petalumaphotography.com/images/petaluma-gallery/petaluma-3.jpg">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Robby McCullough",
+      "jobTitle": "Photographer and Marketer",
+      "url": "https://petalumaphotography.com/about.html",
+      "sameAs": "https://unsplash.com/@mybbor",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Petaluma",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +52,15 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <h1><a href="index.html">Petaluma Photography</a></h1>
+                <a href="index.html" class="nav-brand-link">
+                    <img src="images/petaluma%20photography%20logo%20glyph.png" alt="" class="nav-rooster" aria-hidden="true">
+                    <h1>Petaluma Photography</h1>
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html#galleries">Galleries</a></li>
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="credits.html">Credits</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -34,74 +72,29 @@
         </section>
 
         <section id="about-content" class="about-content">
-            <div class="about-text">
-                <h3>Why Petaluma</h3>
-                <p>
-                    I grew up in the San Francisco Bay Area, and Petaluma was always the town you'd drive through
-                    on the way to somewhere else. Victorian storefronts, the old grain mill,
-                    the Petaluma River winding through downtown. It wasn't flashy, but it stuck with you.
-                </p>
-
-                <h3>What This Is</h3>
-                <p>
-                    This site started as a way to collect photos that capture a specific feeling—
-                    the kind of quiet detail you notice when you're paying attention. A bent tree in a field.
-                    Morning light on a building. The textures of a place that tell you where you are.
-                </p>
-                <p>
-                    Most of these photos aren't mine. They're from photographers on Unsplash and Pexels
-                    who've shared their work freely. I've gathered them here because they each capture
-                    something about Petaluma and the wider Sonoma County landscape that feels right.
-                </p>
-
-                <h3>The Approach</h3>
-                <p>
-                    I'm drawn to images that show places as they actually are—not overly styled,
-                    not selling you anything. Just honest moments. A path through the woods.
-                    An old diner. The kind of scene that makes you slow down.
-                </p>
-                <p>
-                    Photography, for me, is about documentation and memory. It's a way to hold
-                    onto the details that would otherwise slip away. This collection is part of that—
-                    a visual record of a place I keep coming back to, even when I'm somewhere else.
-                </p>
+            <div class="about-photo-wrap">
+                <img src="images/petaluma%20photography%20logo%20glyph.png" alt="Petaluma Photography logo" class="about-photo">
             </div>
-
-            <aside class="about-sidebar">
-                <div class="info-card">
-                    <h4>Services</h4>
-                    <ul>
-                        <li>Travel Photography</li>
-                        <li>Architectural Photography</li>
-                        <li>Landscape Photography</li>
-                        <li>Commercial Projects</li>
-                        <li>Fine Art Prints</li>
-                    </ul>
-                </div>
-
-                <div class="info-card">
-                    <h4>Location</h4>
-                    <p>Based in California<br>Available for travel worldwide</p>
-                </div>
-
-                <div class="info-card">
-                    <h4>Get in Touch</h4>
-                    <p>
-                        <a href="#" id="contact-email-about">Send an email</a>
-                    </p>
-                    <script>
-                        document.getElementById('contact-email-about').addEventListener('click', function(e) {
-                            e.preventDefault();
-                            window.location.href = 'mai' + 'lto:' + 'myb' + 'bor' + '@' + 'gma' + 'il.com';
-                        });
-                    </script>
-                </div>
-            </aside>
+            <div class="about-text">
+                <h3>About</h3>
+                <p>Petaluma is one of those places that rewards attention. The light here is different — golden and low in the afternoons, dramatic in the rainy season. The grain mill silos, the river at dusk, the hills that seem to glow in October. It's a place people drive through on their way somewhere else, and then keep thinking about.</p>
+                <p>This site is a personal project to collect and share photographs that capture something true about this place. Some are mine. Most are by other photographers who've shared their work through Unsplash and Pexels — people who've seen the same things I have and had the presence of mind to capture them.</p>
+                <p>It's an ongoing project. I add to it when I find something worth adding.</p>
+                <a href="#" class="contact-button" id="contact-email-about">Get in Touch</a>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2026 Petaluma Photography. All rights reserved.</p>
     </footer>
+    <script>
+        document.getElementById('contact-email-about').addEventListener('click', function(e) {
+            e.preventDefault();
+            const user = 'mybbor';
+            const domain = 'gmail.com';
+            window.location.href = 'mailto:' + user + '@' + domain;
+        });
+    </script>
 </body>
 </html>

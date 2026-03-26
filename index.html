@@ -3,8 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Petaluma Photography - Capturing moments inspired by the beauty of Sonoma County">
-    <title>Petaluma Photography | Portfolio</title>
+    <meta name="description" content="A curated photo gallery of Petaluma, California and Sonoma County. Landscape, street, and nature photography by Petaluma photographer Robby McCullough.">
+    <meta name="keywords" content="Petaluma photography, Petaluma photographer, Sonoma County photography, Petaluma California photos, Petaluma photo gallery">
+    <title>Petaluma Photography – Sonoma County Photo Gallery | Robby McCullough</title>
+    <link rel="canonical" href="https://petalumaphotography.com/">
+    <link rel="icon" type="image/png" href="images/petaluma%20photography%20logo%20glyph.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Petaluma Photography">
+    <meta property="og:title" content="Petaluma Photography – Sonoma County Photo Gallery">
+    <meta property="og:description" content="A curated gallery of Petaluma, California and Sonoma County. Landscape, street, and nature photography by Robby McCullough.">
+    <meta property="og:url" content="https://petalumaphotography.com/">
+    <meta property="og:image" content="https://petalumaphotography.com/images/petaluma-gallery/petaluma-3.jpg">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Petaluma Photography – Sonoma County Photo Gallery">
+    <meta name="twitter:description" content="A curated gallery of Petaluma, California and Sonoma County. Photography by Robby McCullough.">
+    <meta name="twitter:image" content="https://petalumaphotography.com/images/petaluma-gallery/petaluma-3.jpg">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Petaluma Photography",
+      "url": "https://petalumaphotography.com",
+      "description": "A curated photo gallery of Petaluma, California and Sonoma County by photographer Robby McCullough.",
+      "author": {
+        "@type": "Person",
+        "name": "Robby McCullough",
+        "jobTitle": "Photographer",
+        "sameAs": "https://unsplash.com/@mybbor",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Petaluma",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,30 +57,32 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <h1><a href="index.html">Petaluma Photography</a></h1>
+                <a href="index.html" class="nav-brand-link">
+                    <img src="images/petaluma%20photography%20logo%20glyph.png" alt="" class="nav-rooster" aria-hidden="true">
+                    <h1>Petaluma Photography</h1>
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="#galleries">Galleries</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="credits.html">Credits</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <img src="" alt="" class="hero-image">
+        <img src="images/petaluma-gallery/petaluma-2.jpg" alt="Petaluma waterfront at dusk, pink and purple sky reflected in calm water" class="hero-image">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2>Light, Moment, Memory</h2>
-            <p>Photography rooted in Sonoma County's natural beauty</p>
+            <h2>Petaluma, Through the Lens</h2>
+            <p>A curated collection of photography from one of California's most charming small cities</p>
         </div>
     </section>
 
     <main id="galleries">
         <section class="gallery-section">
-            <h3 class="gallery-title">Petaluma, California</h3>
-            <p class="gallery-subtitle">Exploring the beauty of Sonoma County and beyond</p>
+            <h3 class="gallery-title">Fields, Rivers & Golden Hours</h3>
+            <p class="gallery-subtitle">Landscapes, streets, and quiet moments from Petaluma and Sonoma County</p>
             <div class="gallery-grid" data-gallery="petaluma">
                 <!-- Images will be dynamically loaded -->
             </div>
@@ -46,10 +90,13 @@
     </main>
 
     <section id="contact" class="contact">
-        <div class="contact-content">
-            <h3>Let's Work Together</h3>
-            <p>Available for photography projects and commissions</p>
-            <a href="#" class="contact-button" id="contact-email">Get in Touch</a>
+        <div class="contact-inner">
+            <img src="images/robby%20behind%20the%20camera.jpg" alt="Robby McCullough behind the camera" class="contact-photo">
+            <div class="contact-content">
+                <h3>Let's Work Together</h3>
+                <p>I'm Robby McCullough — a marketer, photographer, and web designer based in Petaluma, California. Whether you're interested in photography, a creative project, or just want to talk about something local, I'd love to hear from you.</p>
+                <a href="#" class="contact-button" id="contact-email">Get in Touch</a>
+            </div>
         </div>
     </section>
 

@@ -28,31 +28,24 @@ function setupContactEmail() {
     });
 }
 
+// Fisher-Yates shuffle
+function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
 // Load gallery metadata and initialize
 async function loadGalleryMetadata() {
     try {
         const response = await fetch('images/petaluma-gallery/metadata.json');
-        photoMetadata = await response.json();
-        setRandomHeroImage();
+        photoMetadata = shuffleArray(await response.json());
         initializeGallery();
     } catch (error) {
         console.error('Error loading gallery metadata:', error);
     }
-}
-
-// Set random hero image from gallery
-function setRandomHeroImage() {
-    if (photoMetadata.length === 0) return;
-
-    const heroImage = document.querySelector('.hero-image');
-    if (!heroImage) return;
-
-    // Pick a random photo from the metadata
-    const randomIndex = Math.floor(Math.random() * photoMetadata.length);
-    const randomPhoto = photoMetadata[randomIndex];
-
-    heroImage.src = `images/petaluma-gallery/${randomPhoto.filename}`;
-    heroImage.alt = randomPhoto.description;
 }
 
 // Initialize gallery with metadata
@@ -152,10 +145,13 @@ function openLightbox(index) {
     currentIndex = index;
     const photo = photoMetadata[currentIndex];
     const source = photo.source === 'pexels' ? 'Pexels' : 'Unsplash';
+    const photographerHtml = photo.photographer_url
+        ? `<a href="${photo.photographer_url}" target="_blank" rel="noopener noreferrer" style="color: inherit;">${photo.photographer}</a>`
+        : photo.photographer;
 
     img.src = `images/petaluma-gallery/${photo.filename}`;
     img.alt = photo.description;
-    caption.innerHTML = `${photo.description}<br><span style="font-size: 0.9rem; opacity: 0.8;">Photo by ${photo.photographer} on ${source}</span>`;
+    caption.innerHTML = `${photo.description}<br><span style="font-size: 0.9rem; opacity: 0.8;">Photo by ${photographerHtml} on ${source}</span>`;
 
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -182,9 +178,12 @@ function navigateLightbox(direction) {
 
     const photo = photoMetadata[currentIndex];
     const source = photo.source === 'pexels' ? 'Pexels' : 'Unsplash';
+    const photographerHtml = photo.photographer_url
+        ? `<a href="${photo.photographer_url}" target="_blank" rel="noopener noreferrer" style="color: inherit;">${photo.photographer}</a>`
+        : photo.photographer;
     img.src = `images/petaluma-gallery/${photo.filename}`;
     img.alt = photo.description;
-    caption.innerHTML = `${photo.description}<br><span style="font-size: 0.9rem; opacity: 0.8;">Photo by ${photo.photographer} on ${source}</span>`;
+    caption.innerHTML = `${photo.description}<br><span style="font-size: 0.9rem; opacity: 0.8;">Photo by ${photographerHtml} on ${source}</span>`;
 }
 
 // Smooth scroll for navigation links

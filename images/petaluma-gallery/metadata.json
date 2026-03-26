@@ -2,28 +2,28 @@
   {
     "number": "1",
     "filename": "petaluma-a-person-walking-down-a-dirt-road-in-the-middle-of.jpg",
-    "description": "a person walking down a dirt road in the middle of a field",
+    "description": "Person walking down a dirt road through open fields near Petaluma, California",
     "photographer": "Ashe Walker",
     "id": "vI1iGbdGuY4"
   },
   {
     "number": "2",
     "filename": "petaluma-a-grassy-field-with-mountains-in-the-background.jpg",
-    "description": "a grassy field with mountains in the background",
+    "description": "Rolling grassy hills with mountains in the background, Petaluma, California",
     "photographer": "Ashe Walker",
     "id": "3FDdepK3U8k"
   },
   {
     "number": "3",
     "filename": "petaluma-man-in-white-shirt-sitting-on-couch-using-macbook.jpg",
-    "description": "man in white shirt sitting on couch using macbook",
+    "description": "Person relaxing on a couch with a laptop in a cozy Petaluma home",
     "photographer": "Christine von Raesfeld",
     "id": "5pU797Njhzo"
   },
   {
     "number": "4",
     "filename": "petaluma-fall.jpg",
-    "description": "Fall",
+    "description": "Autumn colors in Petaluma, California",
     "photographer": "rayne madison",
     "id": "Mwxw5uDrM7w"
   },
@@ -37,7 +37,7 @@
   {
     "number": "6",
     "filename": "petaluma-chicken-hen-red-and-black.jpg",
-    "description": "chicken, hen, red and black,",
+    "description": "A red and black hen in Petaluma, California – a nod to the city's historic egg farming heritage",
     "photographer": "Lori Ayre",
     "id": "x51DB1O3_hk"
   },
@@ -58,14 +58,14 @@
   {
     "number": "9",
     "filename": "petaluma-brown-and-black-cat-on-green-grass-field-during-da.jpg",
-    "description": "brown and black cat on green grass field during daytime",
+    "description": "A brown and black cat resting on green grass in Petaluma, California",
     "photographer": "Lori Ayre",
     "id": "h4ZopbKXDow"
   },
   {
     "number": "10",
     "filename": "petaluma-a-tree-that-is-bent-over-in-the-grass.jpg",
-    "description": "a tree that is bent over in the grass",
+    "description": "A wind-bent tree in the rolling grasslands near Petaluma, California",
     "photographer": "Ashe Walker",
     "id": "YNGTdVcCFtc"
   },
@@ -79,21 +79,21 @@
   {
     "number": "12",
     "filename": "petaluma-close-up-of-succulents.jpg",
-    "description": "Close up of succulents.",
+    "description": "Close-up of succulents growing in Sonoma County, California",
     "photographer": "rayne madison",
     "id": "maWeol8sb3w"
   },
   {
     "number": "13",
     "filename": "petaluma-wire.jpg",
-    "description": "Wire",
+    "description": "Utility wire against an open sky in Petaluma, California",
     "photographer": "rayne madison",
     "id": "eIcgUrE0aUM"
   },
   {
     "number": "14",
     "filename": "petaluma-ferns.jpg",
-    "description": "Ferns",
+    "description": "Lush ferns along a trail in Sonoma County, California",
     "photographer": "rayne madison",
     "id": "RXc2tdwHBsw"
   },
@@ -107,14 +107,14 @@
   {
     "number": "16",
     "filename": "petaluma-large-tree-with-cumulus-clouds.jpg",
-    "description": "Large Tree With Cumulus Clouds.",
+    "description": "A large oak tree beneath dramatic cumulus clouds in Petaluma, California",
     "photographer": "Cristina Anne Costello",
     "id": "68_UN8Qfo7Q"
   },
   {
     "number": "17",
     "filename": "petaluma-path-through-woods.jpg",
-    "description": "Path through woods",
+    "description": "Sunlit path winding through the woods near Petaluma, California",
     "photographer": "rayne madison",
     "id": "MH-gIadCMF4"
   },
@@ -149,5 +149,41 @@
     "photographer": "Robert So",
     "id": "pexels-28134048",
     "source": "pexels"
+  },
+  {
+    "number": "22",
+    "filename": "petaluma.jpg",
+    "description": "Mountain bike resting against a wooden bench on a trail, rolling green hills and dramatic clouds in the distance",
+    "photographer": "Robby McCullough",
+    "photographer_url": "https://unsplash.com/mybbor",
+    "id": "petaluma-trail-bench",
+    "source": "unsplash"
+  },
+  {
+    "number": "23",
+    "filename": "petaluma-2.jpg",
+    "description": "Petaluma waterfront at dusk, pink and purple sky reflected in calm water",
+    "photographer": "Robby McCullough",
+    "photographer_url": "https://unsplash.com/mybbor",
+    "id": "petaluma-waterfront-dusk",
+    "source": "unsplash"
+  },
+  {
+    "number": "24",
+    "filename": "petaluma-3.jpg",
+    "description": "Sunset over a winding path through open green fields in Petaluma",
+    "photographer": "Robby McCullough",
+    "photographer_url": "https://unsplash.com/mybbor",
+    "id": "petaluma-sunset-path",
+    "source": "unsplash"
+  },
+  {
+    "number": "25",
+    "filename": "petaluma-4.jpg",
+    "description": "Golden hour sunset along a fenced hillside trail with sweeping views of Petaluma's rolling hills",
+    "photographer": "Robby McCullough",
+    "photographer_url": "https://unsplash.com/mybbor",
+    "id": "petaluma-hillside-sunset",
+    "source": "unsplash"
   }
 ]

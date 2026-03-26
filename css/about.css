@@ -3,13 +3,18 @@
 .about-main {
     margin-top: 80px;
     min-height: calc(100vh - 200px);
+    padding: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #c8b898 0%, #faf8f5 18%);
 }
 
 .about-hero {
     text-align: center;
     padding: 6rem 2rem 4rem;
-    background: var(--paper-white);
-    border-bottom: 1px solid var(--border-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../images/petaluma-gallery/petaluma-3.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
 }
 
 .about-hero h2 {
@@ -18,7 +23,7 @@
     font-weight: 400;
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
-    color: var(--text-primary);
+    color: #fff;
 }
 
 .decorative-line {
@@ -29,25 +34,31 @@
 }
 
 .about-content {
-    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5rem;
+    max-width: 1100px;
     margin: 4rem auto;
     padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
+}
+
+.about-photo-wrap {
+    width: 340px;
+    flex-shrink: 0;
+}
+
+.about-photo {
+    width: 100%;
+    display: block;
 }
 
 .about-text h3 {
     font-family: 'Instrument Serif', serif;
     font-size: 2rem;
     color: var(--accent);
-    margin-top: 3rem;
     margin-bottom: 1rem;
     font-weight: 400;
-}
-
-.about-text h3:first-child {
-    margin-top: 0;
 }
 
 .about-text p {
@@ -57,73 +68,11 @@
     margin-bottom: 1.5rem;
 }
 
-.about-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.info-card {
-    background: var(--paper-white);
-    padding: 2rem;
-    border-radius: 2px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.info-card h4 {
-    font-family: 'Instrument Serif', serif;
-    font-size: 1.5rem;
-    color: var(--accent);
-    margin-bottom: 1rem;
-    font-weight: 400;
-}
-
-.info-card ul {
-    list-style: none;
-}
-
-.info-card ul li {
-    padding: 0.5rem 0;
-    color: var(--text-secondary);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.info-card ul li:last-child {
-    border-bottom: none;
-}
-
-.info-card p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-.info-card a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.info-card a:hover {
-    color: var(--accent-light);
-}
-
 .nav-links a.active {
     color: var(--accent);
 }
 
-/* Responsive Design */
-@media (max-width: 968px) {
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .about-sidebar {
-        order: -1;
-    }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
     .about-hero h2 {
         font-size: 2.5rem;
@@ -133,16 +82,21 @@
         padding: 4rem 1rem 3rem;
     }
 
+    .about-content {
+        flex-direction: column;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .about-photo-wrap {
+        width: 100%;
+    }
+
     .about-text h3 {
         font-size: 1.5rem;
     }
 
     .about-text p {
         font-size: 1rem;
-    }
-
-    .about-content {
-        margin: 2rem auto;
-        padding: 0 1rem;
     }
 }
