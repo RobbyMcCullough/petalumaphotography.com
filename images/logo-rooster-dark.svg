@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Outer Concentric Rings representing high-end lens filter elements / exhibition frame -->
+  <circle cx="60" cy="60" r="56" stroke="#cda16c" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.4" />
+  <circle cx="60" cy="60" r="52" stroke="#cda16c" stroke-width="0.6" opacity="0.6" />
+
+  <!-- Rooster Crown/Comb (Clean geometric vector arcs) -->
+  <path d="M 43 35 C 43 31, 46 29, 47 33 C 48 30, 50 29, 50 34 C 51 31, 53 32, 53 36 C 53 32, 55 33, 54 38" stroke="#cda16c" stroke-width="0.8" stroke-linecap="round" />
+
+  <!-- Head Profile -->
+  <circle cx="45" cy="40" r="6" stroke="#cda16c" stroke-width="0.8" />
+  
+  <!-- Subtle eye detail -->
+  <circle cx="43.5" cy="39" r="0.75" fill="#cda16c" />
+
+  <!-- Sharp Beak -->
+  <path d="M 39 39.5 L 33 42 L 39 44" stroke="#cda16c" stroke-width="0.8" stroke-linejoin="round" />
+
+  <!-- Wattle (Teardrop detail under chin) -->
+  <path d="M 44.5 45.5 C 43 45.5, 41 48, 43 51 C 45 53, 47 50, 46.5 46.5" stroke="#cda16c" stroke-width="0.8" opacity="0.9" />
+
+  <!-- Neck Sweep (Majestic, elegant golden curve) -->
+  <path d="M 51 40 C 51 49, 47 56, 40 61" stroke="#cda16c" stroke-width="1.2" opacity="0.95" />
+
+  <!-- Back/Spine sweep -->
+  <path d="M 51 40 C 59 40, 66 45, 66 54" stroke="#cda16c" stroke-width="1" opacity="0.9" />
+
+  <!-- Detailed Feather Plumage (Overlapping delicate fine-line arcs for luxury texture) -->
+  <!-- Feather 1: High arch tail feather -->
+  <path d="M 60 48 C 72 38, 82 40, 82 56 C 82 65, 76 72, 60 76" stroke="#cda16c" stroke-width="0.8" opacity="0.8" />
+  
+  <!-- Feather 2: Outer sweeping feather -->
+  <path d="M 62 51 C 76 43, 85 47, 85 61 C 85 71, 76 77, 62 79" stroke="#cda16c" stroke-width="0.6" opacity="0.65" />
+  
+  <!-- Feather 3: Lower tail feather -->
+  <path d="M 58 46 C 68 33, 75 35, 75 50 C 75 59, 69 66, 56 70" stroke="#cda16c" stroke-width="0.6" opacity="0.5" />
+  
+  <!-- Feather 4: Subtle dashed accent feather -->
+  <path d="M 64 54 C 78 50, 87 56, 87 67 C 87 75, 78 81, 64 82" stroke="#cda16c" stroke-width="0.5" stroke-dasharray="2 1.5" opacity="0.4" />
+
+  <!-- Full Round Body / Breast curve -->
+  <path d="M 40 61 C 35 67, 37 76, 45 80 C 53 84, 63 80, 67 72" stroke="#cda16c" stroke-width="1.2" stroke-linecap="round" opacity="0.95" />
+
+  <!-- Wing outline (Elegant geometric loop representing camera filter ring or leaf) -->
+  <path d="M 48 58 C 55 58, 62 62, 62 68 C 62 74, 52 74, 48 68 Z" stroke="#cda16c" stroke-width="0.8" opacity="0.85" />
+  
+  <!-- Wing inner structural lines -->
+  <path d="M 52 62 C 55 64, 58 66, 60 68" stroke="#cda16c" stroke-width="0.5" opacity="0.6" />
+  <path d="M 50 65 C 53 67, 56 69, 58 71" stroke="#cda16c" stroke-width="0.5" opacity="0.6" />
+  <path d="M 48 68 C 51 70, 54 72, 56 74" stroke="#cda16c" stroke-width="0.5" opacity="0.4" />
+
+  <!-- Legs & Talons -->
+  <!-- Left Leg -->
+  <line x1="48" y1="80" x2="48" y2="90" stroke="#cda16c" stroke-width="0.8" opacity="0.9" />
+  <!-- Left Foot / Toes -->
+  <path d="M 43 90 H 53 M 48 90 L 46 94 M 48 90 L 50 94" stroke="#cda16c" stroke-width="0.8" stroke-linecap="round" opacity="0.9" />
+  <!-- Spur -->
+  <path d="M 48 85 L 45 83" stroke="#cda16c" stroke-width="0.6" stroke-linecap="round" opacity="0.8" />
+
+  <!-- Right Leg -->
+  <line x1="56" y1="79" x2="56" y2="88" stroke="#cda16c" stroke-width="0.8" opacity="0.6" />
+  <!-- Right Foot / Toes -->
+  <path d="M 51 88 H 61 M 56 88 L 54 92 M 56 88 L 58 92" stroke="#cda16c" stroke-width="0.8" stroke-linecap="round" opacity="0.6" />
+
+  <!-- Ground Line / Frame grounding -->
+  <line x1="30" y1="96" x2="90" y2="96" stroke="#cda16c" stroke-width="0.5" opacity="0.3" stroke-dasharray="8 3" />
+</svg>

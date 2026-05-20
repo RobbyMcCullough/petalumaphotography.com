@@ -6,7 +6,14 @@
     <meta name="description" content="About Robby McCullough – a Petaluma-based photographer and marketer documenting the beauty of Petaluma, California and Sonoma County.">
     <title>About – Petaluma Photographer Robby McCullough | Petaluma Photography</title>
     <link rel="canonical" href="https://petalumaphotography.com/about.html">
-    <link rel="icon" type="image/png" href="images/petaluma%20photography%20logo%20glyph.png">
+
+    <!-- Local Geo Meta Tags -->
+    <meta name="geo.region" content="US-CA">
+    <meta name="geo.placename" content="Petaluma">
+    <meta name="geo.position" content="38.2324;-122.6367">
+    <meta name="ICBM" content="38.2324, -122.6367">
+
+    <link rel="icon" type="image/svg+xml" href="images/logo-rooster-dark.svg">
 
     <!-- Open Graph -->
     <meta property="og:type" content="profile">
@@ -27,17 +34,41 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Robby McCullough",
-      "jobTitle": "Photographer and Marketer",
-      "url": "https://petalumaphotography.com/about.html",
-      "sameAs": "https://unsplash.com/@mybbor",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Petaluma",
-        "addressRegion": "CA",
-        "addressCountry": "US"
-      }
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://petalumaphotography.com/#founder",
+          "name": "Robby McCullough",
+          "jobTitle": "Photographer and Marketer",
+          "url": "https://petalumaphotography.com/about.html",
+          "sameAs": "https://unsplash.com/@mybbor",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Petaluma",
+            "addressRegion": "CA",
+            "postalCode": "94952",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "PhotographyStore",
+          "@id": "https://petalumaphotography.com/#photography-store",
+          "name": "Petaluma Photography",
+          "url": "https://petalumaphotography.com",
+          "image": "https://petalumaphotography.com/images/petaluma-gallery/petaluma-4.jpg",
+          "priceRange": "$$",
+          "founder": {
+            "@id": "https://petalumaphotography.com/#founder"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Petaluma",
+            "addressRegion": "CA",
+            "postalCode": "94952",
+            "addressCountry": "US"
+          }
+        }
+      ]
     }
     </script>
 
@@ -45,39 +76,39 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Julius+Sans+One&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#about-content" class="skip-link">Skip to content</a>
-    <header class="header">
+    <header class="header scrolled">
         <nav class="nav">
             <div class="nav-brand">
-                <a href="index.html" class="nav-brand-link">
-                    <img src="images/petaluma%20photography%20logo%20glyph.png" alt="" class="nav-rooster" aria-hidden="true">
-                    <h1>Petaluma Photography</h1>
+                <a href="index.html" class="nav-brand-link" id="nav-brand-link">
+                    <img src="images/logo-rooster-dark.svg" alt="Petaluma Photography Rooster Logo" class="nav-rooster" aria-hidden="true">
+                    <span class="nav-brand-text">Petaluma Photography</span>
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html#galleries">Galleries</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="credits.html">Credits</a></li>
+                <li><a href="index.html#galleries" id="nav-galleries">Galleries</a></li>
+                <li><a href="about.html" class="active" id="nav-about">About</a></li>
+                <li><a href="credits.html" id="nav-credits">Credits</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="about-main">
         <section class="about-hero">
-            <h2>About Petaluma Photography</h2>
+            <h1>About Petaluma Photography</h1>
             <div class="decorative-line"></div>
         </section>
 
         <section id="about-content" class="about-content">
             <div class="about-photo-wrap">
-                <img src="images/petaluma%20photography%20logo%20glyph.png" alt="Petaluma Photography logo" class="about-photo">
+                <img src="images/logo-rooster-dark.svg" alt="Petaluma Photography Rooster Logo" class="about-photo">
             </div>
             <div class="about-text">
                 <h3>About</h3>
-                <p>Petaluma is one of those places that rewards attention. The light here is different — golden and low in the afternoons, dramatic in the rainy season. The grain mill silos, the river at dusk, the hills that seem to glow in October. It's a place people drive through on their way somewhere else, and then keep thinking about.</p>
+                <p>Petaluma is one of those places that rewards attention. Located in the heart of Sonoma County just north of San Francisco, the light here is different — golden and low in the afternoons, dramatic in the rainy season. From the historic downtown grain mill silos to the Petaluma River at dusk and the rolling hills that glow in October, it's a place people drive through on their way to Northern California's wine country, and then keep thinking about.</p>
                 <p>This site is a personal project to collect and share photographs that capture something true about this place. Some are mine. Most are by other photographers who've shared their work through Unsplash and Pexels — people who've seen the same things I have and had the presence of mind to capture them.</p>
                 <p>It's an ongoing project. I add to it when I find something worth adding.</p>
                 <a href="#" class="contact-button" id="contact-email-about">Get in Touch</a>
@@ -86,7 +117,14 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Petaluma Photography. All rights reserved.</p>
+        <address class="footer-nap">
+            <span class="nap-item"><strong>Petaluma Photography</strong></span>
+            <span class="nap-separator">&bull;</span>
+            <span class="nap-item">Petaluma, California 94952</span>
+            <span class="nap-separator">&bull;</span>
+            <span class="nap-item">Serving Sonoma County & the SF Bay Area</span>
+        </address>
+        <p class="footer-copyright">&copy; 2026 Petaluma Photography. All rights reserved.</p>
     </footer>
     <script>
         document.getElementById('contact-email-about').addEventListener('click', function(e) {

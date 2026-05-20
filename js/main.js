@@ -75,6 +75,20 @@ function createGalleryItem(imagePath, description, photographer, index) {
 
     item.appendChild(img);
 
+    // Create dynamic hover metadata overlay
+    const info = document.createElement('div');
+    info.className = 'gallery-info';
+
+    const titleEl = document.createElement('h4');
+    titleEl.textContent = description;
+
+    const photographerEl = document.createElement('p');
+    photographerEl.textContent = `by ${photographer}`;
+
+    info.appendChild(titleEl);
+    info.appendChild(photographerEl);
+    item.appendChild(info);
+
     // Click handler for lightbox
     item.addEventListener('click', () => {
         openLightbox(index);
@@ -226,19 +240,13 @@ function setupHeroParallax() {
     }, { passive: true });
 }
 
-// Optional: Add scroll-based header background
-let lastScroll = 0;
+// Scroll-based header background toggle
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
-        header.style.background = 'rgba(250, 248, 245, 0.98)';
-        header.style.boxShadow = '0 1px 5px rgba(0, 0, 0, 0.1)';
+    if (!header) return;
+    if (window.scrollY > 40) {
+        header.classList.add('scrolled');
     } else {
-        header.style.background = 'rgba(250, 248, 245, 0.95)';
-        header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.05)';
+        header.classList.remove('scrolled');
     }
-
-    lastScroll = currentScroll;
-});
+}, { passive: true });

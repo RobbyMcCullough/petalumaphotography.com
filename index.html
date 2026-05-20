@@ -7,7 +7,14 @@
     <meta name="keywords" content="Petaluma photography, Petaluma photographer, Sonoma County photography, Petaluma California photos, Petaluma photo gallery">
     <title>Petaluma Photography – Sonoma County Photo Gallery | Robby McCullough</title>
     <link rel="canonical" href="https://petalumaphotography.com/">
-    <link rel="icon" type="image/png" href="images/petaluma%20photography%20logo%20glyph.png">
+    
+    <!-- Local Geo Meta Tags -->
+    <meta name="geo.region" content="US-CA">
+    <meta name="geo.placename" content="Petaluma">
+    <meta name="geo.position" content="38.2324;-122.6367">
+    <meta name="ICBM" content="38.2324, -122.6367">
+
+    <link rel="icon" type="image/svg+xml" href="images/logo-rooster-dark.svg">
     <script defer data-domain="petalumaphotography.com" src="https://analytics.robbymccullough.com/js/script.js"></script>
 
     <!-- Open Graph -->
@@ -29,64 +36,115 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ImageGallery",
-      "name": "Petaluma Photography – Sonoma County Photo Gallery",
-      "url": "https://petalumaphotography.com",
-      "description": "A curated photo gallery of Petaluma, California and Sonoma County by photographer Robby McCullough.",
-      "author": {
-        "@type": "Person",
-        "name": "Robby McCullough",
-        "jobTitle": "Photographer",
-        "sameAs": "https://unsplash.com/@mybbor",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Petaluma",
-          "addressRegion": "CA",
-          "addressCountry": "US"
+      "@graph": [
+        {
+          "@type": "PhotographyStore",
+          "@id": "https://petalumaphotography.com/#photography-store",
+          "name": "Petaluma Photography",
+          "url": "https://petalumaphotography.com",
+          "image": "https://petalumaphotography.com/images/petaluma-gallery/petaluma-4.jpg",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Petaluma",
+            "addressRegion": "CA",
+            "postalCode": "94952",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Petaluma"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Sonoma County"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Marin County"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "San Francisco Bay Area"
+            }
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Robby McCullough",
+            "sameAs": "https://unsplash.com/@mybbor"
+          }
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://petalumaphotography.com/#gallery",
+          "name": "Petaluma Photography – Sonoma County Photo Gallery",
+          "url": "https://petalumaphotography.com",
+          "description": "A curated photo gallery of Petaluma, California and Sonoma County by photographer Robby McCullough.",
+          "publisher": {
+            "@id": "https://petalumaphotography.com/#photography-store"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Robby McCullough",
+            "jobTitle": "Photographer",
+            "sameAs": "https://unsplash.com/@mybbor",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Petaluma",
+              "addressRegion": "CA",
+              "addressCountry": "US"
+            }
+          },
+          "about": {
+            "@type": "Place",
+            "name": "Petaluma, California",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Petaluma",
+              "addressRegion": "CA",
+              "addressCountry": "US"
+            }
+          }
         }
-      },
-      "about": {
-        "@type": "Place",
-        "name": "Petaluma, California",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Petaluma",
-          "addressRegion": "CA",
-          "addressCountry": "US"
-        }
-      }
+      ]
     }
     </script>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Julius+Sans+One&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#galleries" class="skip-link">Skip to gallery</a>
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <a href="index.html" class="nav-brand-link">
-                    <img src="images/petaluma%20photography%20logo%20glyph.png" alt="" class="nav-rooster" aria-hidden="true">
-                    <h1>Petaluma Photography</h1>
+                <a href="index.html" class="nav-brand-link" id="nav-brand-link">
+                    <img src="images/logo-rooster-dark.svg" alt="Petaluma Photography Rooster Logo" class="nav-rooster" aria-hidden="true">
+                    <span class="nav-brand-text">Petaluma Photography</span>
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="#galleries">Galleries</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="credits.html">Credits</a></li>
+                <li><a href="#galleries" id="nav-galleries">Galleries</a></li>
+                <li><a href="about.html" id="nav-about">About</a></li>
+                <li><a href="credits.html" id="nav-credits">Credits</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <img src="images/petaluma-gallery/petaluma-2.jpg" alt="Petaluma waterfront at dusk, pink and purple sky reflected in calm water" class="hero-image">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2>Petaluma, Through the Lens</h2>
-            <p>A curated collection of photography from one of California's most charming small cities</p>
+        <div class="hero-bg-blur" style="background-image: url('images/petaluma-gallery/petaluma-4.jpg');"></div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1>Petaluma,<br><span class="highlight-text">Through the Lens</span></h1>
+                <p>A curated collection of photography from one of California's most charming small cities.</p>
+                <a href="#galleries" class="hero-cta-btn" id="hero-cta">Explore Galleries</a>
+            </div>
+            <div class="hero-image-wrap">
+                <img src="images/petaluma-gallery/petaluma-4.jpg" alt="Golden hour sunset along a fenced hillside trail with sweeping views of Petaluma's rolling hills" class="hero-image-sharp" fetchpriority="high">
+            </div>
         </div>
     </section>
 
@@ -112,19 +170,26 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 Petaluma Photography. All rights reserved.</p>
+        <address class="footer-nap">
+            <span class="nap-item"><strong>Petaluma Photography</strong></span>
+            <span class="nap-separator">&bull;</span>
+            <span class="nap-item">Petaluma, California 94952</span>
+            <span class="nap-separator">&bull;</span>
+            <span class="nap-item">Serving Sonoma County & the SF Bay Area</span>
+        </address>
+        <p class="footer-copyright">&copy; 2026 Petaluma Photography. All rights reserved.</p>
         <p class="footer-credits">Photos provided by <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> and <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a></p>
     </footer>
 
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" role="dialog" aria-label="Image viewer">
-        <button class="lightbox-close" aria-label="Close">&times;</button>
-        <button class="lightbox-prev" aria-label="Previous image">&#10094;</button>
-        <button class="lightbox-next" aria-label="Next image">&#10095;</button>
-        <img class="lightbox-content" alt="Gallery image">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next image">&#10095;</button>
+        <img class="lightbox-content" id="lightbox-image" alt="Gallery image">
         <div class="lightbox-caption"></div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
 </body>
 </html>

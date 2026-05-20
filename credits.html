@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Photo credits for Petaluma Photography – featuring work by photographers on Unsplash and Pexels capturing Petaluma, California and Sonoma County.">
-    <title>Photo Credits – Petaluma Photography</title>
+    <meta name="description" content="Meet the talented Sonoma County and Petaluma, California photographers behind the Petaluma Photography gallery. Clean licensing and source profiles.">
+    <title>Photo Credits – Sonoma County & Petaluma Photographers | Petaluma Photography</title>
     <link rel="canonical" href="https://petalumaphotography.com/credits.html">
-    <link rel="icon" type="image/png" href="images/petaluma%20photography%20logo%20glyph.png">
+
+    <!-- Local Geo Meta Tags -->
+    <meta name="geo.region" content="US-CA">
+    <meta name="geo.placename" content="Petaluma">
+    <meta name="geo.position" content="38.2324;-122.6367">
+    <meta name="ICBM" content="38.2324, -122.6367">
+
+    <link rel="icon" type="image/svg+xml" href="images/logo-rooster-dark.svg">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -19,36 +26,72 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Photo Credits – Petaluma Photography">
+    <meta name="twitter:title" content="Photo Credits – Sonoma County & Petaluma Photographers">
     <meta name="twitter:description" content="Photo credits for Petaluma Photography, featuring photographers from Unsplash and Pexels.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ItemPage",
+          "@id": "https://petalumaphotography.com/credits.html#page",
+          "name": "Photo Credits – Sonoma County & Petaluma Photographers",
+          "url": "https://petalumaphotography.com/credits.html",
+          "description": "Photo credits and licensing information for Petaluma Photography gallery.",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "Petaluma Photography",
+            "url": "https://petalumaphotography.com"
+          }
+        },
+        {
+          "@type": "PhotographyStore",
+          "@id": "https://petalumaphotography.com/#photography-store",
+          "name": "Petaluma Photography",
+          "url": "https://petalumaphotography.com",
+          "image": "https://petalumaphotography.com/images/petaluma-gallery/petaluma-4.jpg",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Petaluma",
+            "addressRegion": "CA",
+            "postalCode": "94952",
+            "addressCountry": "US"
+          }
+        }
+      ]
+    }
+    </script>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/credits.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Julius+Sans+One&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#credits-content" class="skip-link">Skip to content</a>
-    <header class="header">
+    <header class="header scrolled">
         <nav class="nav">
             <div class="nav-brand">
-                <a href="index.html" class="nav-brand-link">
-                    <img src="images/petaluma%20photography%20logo%20glyph.png" alt="" class="nav-rooster" aria-hidden="true">
-                    <h1>Petaluma Photography</h1>
+                <a href="index.html" class="nav-brand-link" id="nav-brand-link">
+                    <img src="images/logo-rooster-dark.svg" alt="Petaluma Photography Rooster Logo" class="nav-rooster" aria-hidden="true">
+                    <span class="nav-brand-text">Petaluma Photography</span>
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html#galleries">Galleries</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="credits.html" class="active">Credits</a></li>
+                <li><a href="index.html#galleries" id="nav-galleries">Galleries</a></li>
+                <li><a href="about.html" id="nav-about">About</a></li>
+                <li><a href="credits.html" class="active" id="nav-credits">Credits</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="credits-content" class="credits-main">
         <section class="credits-hero">
-            <h2>Thank You to Our Photographers</h2>
+            <h1>Thank You to Our Photographers</h1>
             <div class="decorative-line"></div>
             <p class="credits-intro">
                 All photographs on this site are provided by talented photographers through
@@ -199,7 +242,14 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Petaluma Photography. All rights reserved.</p>
+        <address class="footer-nap">
+            <span class="nap-item"><strong>Petaluma Photography</strong></span>
+            <span class="nap-separator">&bull;</span>
+            <span class="nap-item">Petaluma, California 94952</span>
+            <span class="nap-separator">&bull;</span>
+            <span class="nap-item">Serving Sonoma County & the SF Bay Area</span>
+        </address>
+        <p class="footer-copyright">&copy; 2026 Petaluma Photography. All rights reserved.</p>
         <p class="footer-credits">Photos provided by <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> and <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a></p>
     </footer>
 </body>

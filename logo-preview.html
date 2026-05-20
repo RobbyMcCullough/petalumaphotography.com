@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Identity Review – Petaluma Photography</title>
+    
+    <!-- Load Logo-Optimized Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;600&family=League+Gothic&family=League+Spartan:wght@300;400;600;700&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-bg: #0c0c0d;      /* Warm premium black */
+            --secondary-bg: #141416;    /* Dark charcoal cards */
+            --paper-white: #1b1b1e;     /* High contrast panels */
+            --text-primary: #f5f5f7;    /* Crisp soft white */
+            --text-secondary: #a1a1a6;  /* Sleek gray */
+            --accent: #cda16c;          /* Elegant brass/gold */
+            --accent-light: #dfb887;    /* Bright warm brass */
+            --border-color: #242428;    /* Thin subtle dividers */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 3rem 1.5rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2.5rem;
+        }
+
+        .header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Tabs and Layout Controls */
+        .tabs-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.8rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        .tab-btn.active {
+            background: var(--accent);
+            color: var(--primary-bg);
+            border-color: var(--accent);
+            box-shadow: 0 4px 15px rgba(205, 161, 108, 0.2);
+        }
+
+        /* Review Section Grid */
+        .review-section {
+            display: none;
+            animation: fadeIn 0.6s ease;
+        }
+
+        .review-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-desc {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 2px;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .section-desc-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-desc-text p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .glyph-large-preview {
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+        }
+
+        .glyph-large-preview img {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Logo Option Cards */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .option-card {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(205, 161, 108, 0.1);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .option-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        /* Live Logo Render Wrapper */
+        .logo-preview-box {
+            background: #060607; /* Slightly darker depth for contrast */
+            border: 1px dashed var(--border-color);
+            padding: 3rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .option-card:hover .logo-preview-box {
+            border-color: rgba(205, 161, 108, 0.3);
+            background: #020202;
+        }
+
+        /* Nav Brand Simulation Structure */
+        .brand-link-sim {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-img-sim {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+
+        /* Font Classes styling the simulated brand text */
+        .font-spartan {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .font-raleway {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .font-gothic {
+            font-family: 'League Gothic', sans-serif;
+            font-size: 1.9rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .font-garamond {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+        }
+
+        /* Specs Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .specs-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .specs-table td {
+            padding: 0.6rem 0;
+            font-weight: 300;
+        }
+
+        .specs-table td.label {
+            font-weight: 500;
+            color: var(--text-primary);
+            width: 140px;
+        }
+
+        .code-snippet {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.15rem 0.4rem;
+            border-radius: 2px;
+            color: var(--accent-light);
+        }
+
+        .footer-action {
+            text-align: center;
+            margin-top: 5rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 3rem;
+        }
+
+        .footer-action p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .footer-action a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--accent);
+            transition: all 0.3s ease;
+            padding-bottom: 2px;
+        }
+
+        .footer-action a:hover {
+            color: var(--accent-light);
+            border-color: var(--accent-light);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Presentation Header -->
+        <header class="header">
+            <h1>Brand Identity Options</h1>
+            <p>We have developed two distinct line-art vector glyphs and four high-end logo fonts for your photography brand. Toggle between the tabs below to visually review each combination.</p>
+        </header>
+
+        <!-- Glyphs Toggle Navigation -->
+        <div class="tabs-nav">
+            <button class="tab-btn active" onclick="switchTab('rooster-section', this)">Option 1: The Refined Rooster (Heritage Mark)</button>
+            <button class="tab-btn" onclick="switchTab('camera-section', this)">Option 2: The Camera Aperture (Modern Focus)</button>
+        </div>
+
+        <!-- ==============================================
+             SECTION 1: THE REFINED ROOSTER GLYPH
+             ============================================== -->
+        <section id="rooster-section" class="review-section active">
+            
+            <div class="section-desc">
+                <div class="glyph-large-preview">
+                    <img src="images/logo-rooster-fine-lines.svg" alt="Detailed Rooster Vector">
+                </div>
+                <div class="section-desc-text">
+                    <h2>Geometric Gold Line-Art Rooster</h2>
+                    <p>Designed with exquisite, microscopic vector stroke lines (`stroke-width="0.8"`) in elegant gold and brass accents. This preserves the local Petaluma heritage (historically known as the egg/chicken capital of California) but elevates it to a timeless, premium brand insignia that looks like a high-end luxury watch medallion or boutique estate logo.</p>
+                </div>
+            </div>
+
+            <div class="options-grid">
+                
+                <!-- Option A: League Spartan -->
+                <div class="option-card">
+                    <span class="badge">A: Recommended</span>
+                    <div class="option-title">Option A: League Spartan</div>
+                    
+                    <div class="logo-preview-box">
+                        <div class="brand-link-sim">
+                            <img src="images/logo-rooster-fine-lines.svg" class="logo-img-sim" alt="">
+                            <span class="brand-link-sim font-spartan">Petaluma Photography</span>
+                        </div>
+                    </div>
+
+                    <table class="specs-table">
+                        <tr>
+                            <td class="label">Font Family</td>
+                            <td><span class="code-snippet">League Spartan</span> (League of Moveable Type)</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Style Profile</td>
+                            <td>Geometric Sans-Serif, bold, sharp, structural, confident.</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Visual Balance</td>
+                            <td>Pairs bold, clean-cut modern lettering with the delicate geometric circular lines of the gold glyph. Highly professional and architectural.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Option B: Raleway -->
+                <div class="option-card">
+                    <div class="option-title">Option B: Raleway</div>
+                    
+                    <div class="logo-preview-box">
+                        <div class="brand-link-sim">
+                            <img src="images/logo-rooster-fine-lines.svg" class="logo-img-sim" alt="">
+                            <span class="brand-link-sim font-raleway">Petaluma Photography</span>
+                        </div>
+                    </div>
+
+                    <table class="specs-table">
+                        <tr>
+                            <td class="label">Font Family</td>
+                            <td><span class="code-snippet">Raleway</span> (League of Moveable Type)</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Style Profile</td>
+                            <td>Lightweight Sans-Serif, elegant curves, generous tracking (letter-spacing).</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Visual Balance</td>
+                            <td>Delicate, airy, and premium. The light strokes of the font perfectly match the line weight of the glyph, creating a unified, high-end gallery aesthetic.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Option C: League Gothic -->
+                <div class="option-card">
+                    <div class="option-title">Option C: League Gothic</div>
+                    
+                    <div class="logo-preview-box">
+                        <div class="brand-link-sim">
+                            <img src="images/logo-rooster-fine-lines.svg" class="logo-img-sim" alt="">
+                            <span class="brand-link-sim font-gothic">Petaluma Photography</span>
+                        </div>
+                    </div>
+
+                    <table class="specs-table">
+                        <tr>
+                            <td class="label">Font Family</td>
+                            <td><span class="code-snippet">League Gothic</span> (League of Moveable Type)</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Style Profile</td>
+                            <td>Condensed Sans-Serif, bold, tall, high-impact.</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Visual Balance</td>
+                            <td>Striking, vertical and journalistic. Mimics classic editorial print design like vintage *Life* or *National Geographic* logos.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Option D: Cormorant Garamond -->
+                <div class="option-card">
+                    <div class="option-title">Option D: Cormorant Garamond</div>
+                    
+                    <div class="logo-preview-box">
+                        <div class="brand-link-sim">
+                            <img src="images/logo-rooster-fine-lines.svg" class="logo-img-sim" alt="">
+                            <span class="brand-link-sim font-garamond">Petaluma Photography</span>
+                        </div>
+                    </div>
+
+                    <table class="specs-table">
+                        <tr>
+                            <td class="label">Font Family</td>
+                            <td><span class="code-snippet">Cormorant Garamond</span> (Premium Editorial Serif)</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Style Profile</td>
+                            <td>Classical Serif, high-contrast, artistic, timeless.</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Visual Balance</td>
+                            <td>Timeless elegance and couture feel (think *Vogue* or *Leica* catalogs). Graceful, artistic, and deeply traditional.</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             SECTION 2: THE CAMERA APERTURE GLYPH
+             ============================================== -->
+        <section id="camera-section" class="review-section">
+            
+            <div class="section-desc">
+                <div class="glyph-large-preview">
+                    <img src="images/logo-camera-fine-lines.svg" alt="Detailed Camera Vector">
+                </div>
+                <div class="section-desc-text">
+                    <h2>Subtle Geometric Camera & Aperture</h2>
+                    <p>Designed in gold and brass line-art, this modern glyph showcases a classical rangefinder camera body, shutter button, precise viewfinder lens frame, and intricate mechanical lens aperture blades. It offers a direct, sophisticated connection to the craft of photography itself.</p>
+                </div>
+            </div>
+
+            <div class="options-grid">
+                
+                <!-- Option A: League Spartan -->
+                <div class="option-card">
+                    <span class="badge">A: Recommended</span>
+                    <div class="option-title">Option A: League Spartan</div>
+                    
+                    <div class="logo-preview-box">
+                        <div class="brand-link-sim">
+                            <img src="images/logo-camera-fine-lines.svg" class="logo-img-sim" alt="">
+                            <span class="brand-link-sim font-spartan">Petaluma Photography</span>
+                        </div>
+                    </div>
+
+                    <table class="specs-table">
+                        <tr>
+                            <td class="label">Font Family</td>
+                            <td><span class="code-snippet">League Spartan</span> (League of Moveable Type)</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Style Profile</td>
+                            <td>Geometric Sans-Serif, bold, sharp, structural, confident.</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Visual Balance</td>
+                            <td>Extremely clean and architectural. The strong geometric geometry of League Spartan mirrors the mechanical precision of the rangefinder camera details.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Option B: Raleway -->
+                <div class="option-card">
+                    <div class="option-title">Option B: Raleway</div>
+                    
+                    <div class="logo-preview-box">
+                        <div class="brand-link-sim">
+                            <img src="images/logo-camera-fine-lines.svg" class="logo-img-sim" alt="">
+                            <span class="brand-link-sim font-raleway">Petaluma Photography</span>
+                        </div>
+                    </div>
+
+                    <table class="specs-table">
+                        <tr>
+                            <td class="label">Font Family</td>
+                            <td><span class="code-snippet">Raleway</span> (League of Moveable Type)</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Style Profile</td>
+                            <td>Lightweight Sans-Serif, elegant curves, generous tracking (letter-spacing).</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Visual Balance</td>
+                            <td>Very sleek, airy, and high-fashion. Matches the delicate thin lines of the lens and focus dials. Extremely premium.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Option C: League Gothic -->
+                <div class="option-card">
+                    <div class="option-title">Option C: League Gothic</div>
+                    
+                    <div class="logo-preview-box">
+                        <div class="brand-link-sim">
+                            <img src="images/logo-camera-fine-lines.svg" class="logo-img-sim" alt="">
+                            <span class="brand-link-sim font-gothic">Petaluma Photography</span>
+                        </div>
+                    </div>
+
+                    <table class="specs-table">
+                        <tr>
+                            <td class="label">Font Family</td>
+                            <td><span class="code-snippet">League Gothic</span> (League of Moveable Type)</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Style Profile</td>
+                            <td>Condensed Sans-Serif, bold, tall, high-impact.</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Visual Balance</td>
+                            <td>Impactful and bold. Feels like a classic title block of a mid-century travel magazine or photographic exhibit.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Option D: Cormorant Garamond -->
+                <div class="option-card">
+                    <div class="option-title">Option D: Cormorant Garamond</div>
+                    
+                    <div class="logo-preview-box">
+                        <div class="brand-link-sim">
+                            <img src="images/logo-camera-fine-lines.svg" class="logo-img-sim" alt="">
+                            <span class="brand-link-sim font-garamond">Petaluma Photography</span>
+                        </div>
+                    </div>
+
+                    <table class="specs-table">
+                        <tr>
+                            <td class="label">Font Family</td>
+                            <td><span class="code-snippet">Cormorant Garamond</span> (Premium Editorial Serif)</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Style Profile</td>
+                            <td>Classical Serif, high-contrast, artistic, timeless.</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Visual Balance</td>
+                            <td>Classic luxury look. Perfect for an elite art exhibition or vintage catalog, balancing mechanical camera details with artistic serifs.</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Presentation Footer -->
+        <footer class="footer-action">
+            <p>Once you've had a chance to review the combinations, let me know which <strong>Glyph Option (Rooster or Camera)</strong> and <strong>Typography Option (A, B, C, or D)</strong> you like best!</p>
+            <p><a href="index.html">← Back to the main website</a></p>
+        </footer>
+
+    </div>
+
+    <!-- Switch Tab Javascript -->
+    <script>
+        function switchTab(sectionId, element) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.review-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            // Show selected section
+            const targetSec = document.getElementById(sectionId);
+            if (targetSec) targetSec.classList.add('active');
+
+            // Set buttons state
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>

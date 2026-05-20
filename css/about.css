@@ -5,7 +5,7 @@
     min-height: calc(100vh - 200px);
     padding: 0;
     width: 100%;
-    background: linear-gradient(to bottom, #c8b898 0%, #faf8f5 18%);
+    background: linear-gradient(to bottom, #2b2216 0%, #0c0c0d 22%);
 }
 
 .about-hero {
@@ -17,7 +17,7 @@
     width: 100%;
 }
 
-.about-hero h2 {
+.about-hero h1 {
     font-family: 'Instrument Serif', serif;
     font-size: 3.5rem;
     font-weight: 400;
@@ -74,7 +74,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .about-hero h2 {
+    .about-hero h1 {
         font-size: 2.5rem;
     }
 
