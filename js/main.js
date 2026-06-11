@@ -63,17 +63,30 @@ function initializeGallery() {
     setupLazyLoading();
 }
 
+// Derive WebP path from a JPG/JPEG image path
+function toWebpPath(imagePath) {
+    return imagePath.replace(/\.(jpg|jpeg)$/i, '.webp');
+}
+
 // Create gallery item element
 function createGalleryItem(imagePath, description, photographer, index) {
     const item = document.createElement('div');
     item.className = 'gallery-item';
+
+    const picture = document.createElement('picture');
+
+    const source = document.createElement('source');
+    source.dataset.srcset = toWebpPath(imagePath);
+    source.type = 'image/webp';
 
     const img = document.createElement('img');
     img.dataset.src = imagePath;
     img.alt = description;
     img.loading = 'lazy';
 
-    item.appendChild(img);
+    picture.appendChild(source);
+    picture.appendChild(img);
+    item.appendChild(picture);
 
     // Create dynamic hover metadata overlay
     const info = document.createElement('div');
@@ -104,6 +117,14 @@ function setupLazyLoading() {
             if (entry.isIntersecting) {
                 const img = entry.target;
                 if (img.dataset.src) {
+                    // Activate sibling <source> element if present
+                    const source = img.parentElement && img.parentElement.tagName === 'PICTURE'
+                        ? img.parentElement.querySelector('source[data-srcset]')
+                        : null;
+                    if (source) {
+                        source.srcset = source.dataset.srcset;
+                        source.removeAttribute('data-srcset');
+                    }
                     img.src = img.dataset.src;
                     img.classList.add('loaded');
                     img.removeAttribute('data-src');
@@ -163,7 +184,7 @@ function openLightbox(index) {
         ? `<a href="${photo.photographer_url}" target="_blank" rel="noopener noreferrer" style="color: inherit;">${photo.photographer}</a>`
         : photo.photographer;
 
-    img.src = `images/petaluma-gallery/${photo.filename}`;
+    img.src = toWebpPath(`images/petaluma-gallery/${photo.filename}`);
     img.alt = photo.description;
     caption.innerHTML = `${photo.description}<br><span style="font-size: 0.9rem; opacity: 0.8;">Photo by ${photographerHtml} on ${source}</span>`;
 
@@ -195,7 +216,7 @@ function navigateLightbox(direction) {
     const photographerHtml = photo.photographer_url
         ? `<a href="${photo.photographer_url}" target="_blank" rel="noopener noreferrer" style="color: inherit;">${photo.photographer}</a>`
         : photo.photographer;
-    img.src = `images/petaluma-gallery/${photo.filename}`;
+    img.src = toWebpPath(`images/petaluma-gallery/${photo.filename}`);
     img.alt = photo.description;
     caption.innerHTML = `${photo.description}<br><span style="font-size: 0.9rem; opacity: 0.8;">Photo by ${photographerHtml} on ${source}</span>`;
 }

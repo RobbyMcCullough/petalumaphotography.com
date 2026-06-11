@@ -112,10 +112,12 @@
     }
     </script>
 
+    <link rel="preload" as="image" href="images/petaluma-gallery/petaluma-4.webp" fetchpriority="high">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Julius+Sans+One&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Julius+Sans+One&family=Raleway:wght@200;300;400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Julius+Sans+One&family=Raleway:wght@200;300;400&display=swap"></noscript>
 </head>
 <body>
     <a href="#galleries" class="skip-link">Skip to gallery</a>
@@ -136,7 +138,7 @@
     </header>
 
     <section class="hero">
-        <div class="hero-bg-blur" style="background-image: url('images/petaluma-gallery/petaluma-4.jpg');"></div>
+        <div class="hero-bg-blur" style="background-image: url('images/petaluma-gallery/petaluma-4.jpg'); background-image: image-set(url('images/petaluma-gallery/petaluma-4.webp') type('image/webp'), url('images/petaluma-gallery/petaluma-4.jpg') type('image/jpeg'));"></div>
         <div class="hero-inner">
             <div class="hero-content">
                 <h1>Petaluma,<br><span class="highlight-text">Through the Lens</span></h1>
@@ -144,7 +146,10 @@
                 <a href="#galleries" class="hero-cta-btn" id="hero-cta">Explore Galleries</a>
             </div>
             <div class="hero-image-wrap">
-                <img src="images/petaluma-gallery/petaluma-4.jpg" alt="Golden hour sunset along a fenced hillside trail with sweeping views of Petaluma's rolling hills" class="hero-image-sharp" fetchpriority="high">
+                <picture>
+                    <source srcset="images/petaluma-gallery/petaluma-4.webp" type="image/webp">
+                    <img src="images/petaluma-gallery/petaluma-4.jpg" alt="Golden hour sunset along a fenced hillside trail with sweeping views of Petaluma's rolling hills" class="hero-image-sharp" fetchpriority="high" width="2580" height="1937">
+                </picture>
             </div>
         </div>
     </section>
@@ -161,7 +166,10 @@
 
     <section id="contact" class="contact">
         <div class="contact-inner">
-            <img src="images/robby%20behind%20the%20camera.jpg" alt="Robby McCullough behind the camera" class="contact-photo">
+            <picture>
+                <source srcset="images/robby%20behind%20the%20camera.webp" type="image/webp">
+                <img src="images/robby%20behind%20the%20camera.jpg" alt="Robby McCullough behind the camera" class="contact-photo" width="3000" height="2000" loading="lazy">
+            </picture>
             <div class="contact-content">
                 <h3>Let's Work Together</h3>
                 <p>I'm Robby McCullough — a marketer, photographer, and web designer based in Petaluma, California. Whether you're interested in photography, a creative project, or just want to talk about something local, I'd love to hear from you.</p>
