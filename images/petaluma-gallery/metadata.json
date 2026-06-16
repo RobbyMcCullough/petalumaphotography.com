@@ -152,7 +152,7 @@
   },
   {
     "number": "22",
-    "filename": "petaluma.jpg",
+    "filename": "petaluma-mountain-bike-against-trail-bench.jpg",
     "description": "Mountain bike resting against a wooden bench on a trail, rolling green hills and dramatic clouds in the distance",
     "photographer": "Robby McCullough",
     "photographer_url": "https://unsplash.com/mybbor",
@@ -161,7 +161,7 @@
   },
   {
     "number": "23",
-    "filename": "petaluma-2.jpg",
+    "filename": "petaluma-waterfront-dusk-pink-purple-sky.jpg",
     "description": "Petaluma waterfront at dusk, pink and purple sky reflected in calm water",
     "photographer": "Robby McCullough",
     "photographer_url": "https://unsplash.com/mybbor",
@@ -170,7 +170,7 @@
   },
   {
     "number": "24",
-    "filename": "petaluma-3.jpg",
+    "filename": "petaluma-sunset-path-through-green-fields.jpg",
     "description": "Sunset over a winding path through open green fields in Petaluma",
     "photographer": "Robby McCullough",
     "photographer_url": "https://unsplash.com/mybbor",
@@ -179,11 +179,29 @@
   },
   {
     "number": "25",
-    "filename": "petaluma-4.jpg",
+    "filename": "petaluma-golden-hour-fenced-hillside-trail.jpg",
     "description": "Golden hour sunset along a fenced hillside trail with sweeping views of Petaluma's rolling hills",
     "photographer": "Robby McCullough",
     "photographer_url": "https://unsplash.com/mybbor",
     "id": "petaluma-hillside-sunset",
+    "source": "unsplash"
+  },
+  {
+    "number": "26",
+    "filename": "petaluma-golden-hen-perched-on-farm-wall.jpg",
+    "description": "A golden-orange hen perched on a wall beside a white barn in Petaluma, California — a nod to the city's heritage as the 'Egg Basket of the World'",
+    "photographer": "Robby McCullough",
+    "photographer_url": "https://unsplash.com/mybbor",
+    "id": "petaluma-golden-hen",
+    "source": "unsplash"
+  },
+  {
+    "number": "27",
+    "filename": "petaluma-river-sunset-historic-grain-mill.jpg",
+    "description": "Golden sunset over the Petaluma River with the historic grain mill and silos, wildflowers and an ornate iron sculpture in the foreground",
+    "photographer": "Robby McCullough",
+    "photographer_url": "https://unsplash.com/mybbor",
+    "id": "petaluma-river-sunset-mill",
     "source": "unsplash"
   }
 ]
